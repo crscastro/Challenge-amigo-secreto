@@ -174,3 +174,10 @@ ul {
 .botao-remover:hover {
     background-color: darkred;
 }
+
+.sorteado {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}

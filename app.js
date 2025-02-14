@@ -29,3 +29,21 @@ function adicionarAmigo() {
     }
 }
 
+// Função para sortear um amigo
+function sortearAmigo() {
+    const lista = document.querySelectorAll('#listaAmigos li');
+
+    if (lista.length === 0) {
+        alert('Adicione pelo menos um nome antes de sortear.');
+        return;
+    }
+
+    // Seleciona um nome aleatório da lista
+    const indiceSorteado = Math.floor(Math.random() * lista.length);
+    const nomeSorteado = lista[indiceSorteado].textContent.replace('Remover', '').trim();
+
+    // Exibir o nome sorteado
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<li class="sorteado">Sorteado: <strong>${nomeSorteado}</strong></li>`;
+}
+
