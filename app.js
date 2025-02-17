@@ -36,7 +36,6 @@ function atualizarLista() {
         lista.appendChild(itemLista);
     });
 
-    // Exibe ou oculta a lista
     lista.style.display = amigos.length > 0 ? 'block' : 'none';
 }
 
@@ -47,8 +46,7 @@ function sortearAmigo() {
         return;
     }
 
-    // Oculta a lista ao iniciar o sorteio
-    document.getElementById('listaAmigos').style.display = 'none';
+    document.getElementById('listaAmigos').style.display = 'none'; // Oculta a lista ao iniciar o sorteio
 
     // Seleciona um nome aleatório e o remove da lista
     const indiceSorteado = Math.floor(Math.random() * amigos.length);
@@ -58,16 +56,15 @@ function sortearAmigo() {
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `<li class="sorteado">Sorteado: <strong>${nomeSorteado}</strong></li>`;
 
-    // Se todos os nomes foram sorteados, exibir mensagem e reiniciar
     if (amigos.length === 0) {
         setTimeout(() => {
             alert('Todos os nomes foram sorteados!');
             reiniciarSorteio();
-        }, 600);
+        }, 1000);
     }
 }
 
-// Função para reiniciar o sorteio
+// Função para reiniciar o sorteio manualmente
 function reiniciarSorteio() {
     amigos = []; // Limpa a lista de amigos
     document.getElementById('listaAmigos').innerHTML = ''; // Remove os itens da lista na tela
