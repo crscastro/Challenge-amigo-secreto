@@ -161,24 +161,44 @@ ul {
     background-color: var(--color-button-hover);
 }
 
-.botao-remover {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: red;
-    color: white;
-    border: none;
+/* Estilo específico para o botão de excluir */
+button.delete-button {
+    font-size: 0.5rem;         /* Tamanho da fonte ainda menor */
+    padding: 2px 6px;           /* Menor espaço dentro do botão */
+    margin-left: 8px;           /* Espaço entre o nome e o botão */
+    background-color: transparent; /* Remove a cor de fundo */
+    color: #ff6347;             /* Cor do texto (laranja) */
+    border: 2px solid #ff6347;  /* Borda laranja */
+    border-radius: 15px;        /* Borda arredondada */
+    cursor: pointer;           /* Indica que é clicável */
+    transition: background-color 0.3s ease;  /* Efeito de transição */
+}
+
+/* Efeito ao passar o mouse */
+button.delete-button:hover {
+    background-color: #ff6347; /* Cor de fundo ao passar o mouse */
+    color: white;              /* Cor do texto ao passar o mouse */
+}
+
+/* Estilo para o botão de reinício */
+button.button-reset {
+    font-size: 16px;         
+    padding: 10px 40px;      
+    background-color: #007bff;  
+    color: white;            
+    border: 2px solid #000; 
+    border-radius: 25px;     
     cursor: pointer;
-    border-radius: 5px;
+    margin-left: 10px;       
 }
 
-.botao-remover:hover {
-    background-color: darkred;
+button.button-reset:hover {
+    background-color: #0056b3;  /* Cor de fundo azul mais escuro ao passar o mouse */
 }
 
-.sorteado {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: green;
-    margin-top: 10px;
+/* Alinha os botões de sorteio e reinício ao lado um do outro */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
